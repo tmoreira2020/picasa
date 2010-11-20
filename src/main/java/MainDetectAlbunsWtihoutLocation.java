@@ -92,6 +92,11 @@ public class MainDetectAlbunsWtihoutLocation {
 								location.setValue(correct);
 								entry.update();
 							}
+							correct = "Guarda do Embaú - SC, Brazil";
+							if (value.contains("Guarda do Embaú") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
 							correct = "Itajuba - SC, Brazil";
 							if (value.contains("Itajuba") && !value.equals(correct)) {
 								location.setValue(correct);
@@ -122,8 +127,23 @@ public class MainDetectAlbunsWtihoutLocation {
 								location.setValue(correct);
 								entry.update();
 							}
+							correct = "Foz do Iguaçu - PR, Brazil";
+							if (value.contains("Foz do Iguaçu") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
 							correct = "Rio de Janeiro - RJ, Brazil";
 							if (value.contains("de Janeiro") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Gramado - RS, Brazil";
+							if (value.contains("Gramado") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Recife - PE, Brazil";
+							if (value.contains("Recife") && !value.equals(correct)) {
 								location.setValue(correct);
 								entry.update();
 							}
@@ -177,6 +197,16 @@ public class MainDetectAlbunsWtihoutLocation {
 								location.setValue(correct);
 								entry.update();
 							}
+							correct = "Parsippany - NJ, USA";
+							if (value.contains("Parsippany") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Palm Springs - CA, USA";
+							if (value.contains("Palm Spring") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
 							correct = "Pasadena - CA, USA";
 							if (value.contains("Pasadena") && !value.equals(correct)) {
 								location.setValue(correct);
@@ -187,13 +217,38 @@ public class MainDetectAlbunsWtihoutLocation {
 								location.setValue(correct);
 								entry.update();
 							}
+							correct = "San Pedro - CA, USA";
+							if (value.contains("San Pedro") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
 							correct = "Tusayan - AZ, USA";
-							if (value.contains("Tusayan") && !value.equals(correct)) {
+							if (value.contains("Tusayan") || value.contains("Grand Canyon") && !value.equals(correct)) {
 								location.setValue(correct);
 								entry.update();
 							}
 							correct = "Kuala Terengganu - Terengganu,  Malaysia";
 							if (value.contains("Terengganu") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Puerto Viejo - Limón,  Costa Rica";
+							if (value.contains("Puerto Viejo") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Jacó - Puntarenas,  Costa Rica";
+							if (value.contains("Jacó") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Matapalo - Puntarenas,  Costa Rica";
+							if (value.contains("Matapalo") && !value.equals(correct)) {
+								location.setValue(correct);
+								entry.update();
+							}
+							correct = "Bocas del Toro - Bocas del Toro,  Panama";
+							if (value.contains("Bocas del Toro") && !value.equals(correct)) {
 								location.setValue(correct);
 								entry.update();
 							}
