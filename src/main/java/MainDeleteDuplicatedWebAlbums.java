@@ -7,7 +7,7 @@ import com.google.gdata.data.photos.GphotoEntry;
 import com.google.gdata.data.photos.UserFeed;
 
 
-public class MainDeleteDuplicatedwebAlbums {
+public class MainDeleteDuplicatedWebAlbums {
 
 	public static void main(String[] args) throws Exception {
 		Pattern pattern = Pattern.compile("http://(.)*/\\d\\d\\d\\d\\d\\d\\d\\d02?(.)*");
