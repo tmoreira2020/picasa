@@ -1,5 +1,6 @@
 import java.net.URL;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import com.google.gdata.client.photos.PicasawebService;
 import com.google.gdata.data.photos.GphotoEntry;
@@ -9,6 +10,7 @@ import com.google.gdata.data.photos.UserFeed;
 public class MainDeleteDuplicatedwebAlbums {
 
 	public static void main(String[] args) throws Exception {
+		Pattern pattern = Pattern.compile("http://(.)*/\\d\\d\\d\\d\\d\\d\\d\\d02?(.)*");
 		PicasawebService myService = new PicasawebService("My Application");
 		myService.setUserCredentials(args[0], args[1]);
 
@@ -26,7 +28,7 @@ public class MainDeleteDuplicatedwebAlbums {
 			GphotoEntry entry = entries.get(i);
 			String href = entry.getHtmlLink().getHref();
 			
-			if (href.contains("02?")) {
+			if (pattern.matcher(href).matches()) {
 				System.out.println("Deleting duplicated album: " + entry.getTitle().getPlainText());
 				entry.delete();
 			}
