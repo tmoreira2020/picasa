@@ -39,7 +39,7 @@ public class MainGeneratePicasaIniFile {
 
 			// resultFeed.
 
-			File root = new File("/media/Thiago/photos");
+			File root = new File(args[2]);
 			File[] albuns = root.listFiles();
 
 			int j = 0;
@@ -92,14 +92,15 @@ public class MainGeneratePicasaIniFile {
 							builder.append(daysBetween(start, end));
 							builder.append(".000000");
 							builder.append("\n");
-							builder.append("tmoreira2020_lh=");
+							builder.append(args[0]);
+							builder.append("_lh=");
 							builder.append(entry.getGphotoId());
 							builder.append("\n");
 							builder.append("P2category=Folders on Disk");
 							builder.append("\n");
 							
 							URL feedUrl = new URL(
-									"https://picasaweb.google.com/data/feed/api/user/tmoreira2020/albumid/"
+									"https://picasaweb.google.com/data/feed/api/user/" + args[0] + "/albumid/"
 											+ entry.getGphotoId());
 
 							AlbumFeed feed = myService
@@ -114,7 +115,9 @@ public class MainGeneratePicasaIniFile {
 								builder.append("\n");
 								long id = Long.parseLong(photo.getGphotoId());
 								
-								builder.append("IIDLIST_tmoreira2020_lh=");
+								builder.append("IIDLIST_");
+								builder.append(args[0]);
+								builder.append("_lh=");
 								builder.append(Long.toHexString(id));
 								builder.append("\n");
 							}
@@ -123,51 +126,10 @@ public class MainGeneratePicasaIniFile {
 							IOUtils.write(builder.toString(), new FileOutputStream(picasaini));
 							j++;
 						}
-						else {
-//							String content = IOUtils.toString(new FileInputStream(picasaini));
-//							
-//							if (!content.contains("tmoreira2020_lh=")) {
-//								System.out.println(picasaini);
-//								j++;
-//							}
-						}
 					}
 
 				}
 
-				if (name.contains("with Fran")) {
-					// System.out.println(entry.getEtag());
-					System.out.println(entry.getGphotoId());
-					// System.out.println(entry.getId());
-					// System.out.println(entry.getKind());
-					// System.out.println(entry.getVersionId());
-
-					// Date date = new Date(1899, 12, 30);
-					//
-					// DateTime bigbang =
-					// DateTime.parseDate("1899-12-30-03:00");
-					//
-
-//					System.out.println(entry.getEdited().toString());
-					// System.out.println(bigbang.getValue());
-					// long diff = entry.getEdited().getValue() -
-					// date.getTime();
-					// System.out.println(diff);
-//					System.out.println(entry.getDescription());
-//					System.out.println(entry.getSummary());
-//					System.out.println(entry.getCategories());
-					// System.out.println(entry.getTextContent());
-//					System.out.println();
-
-					// System.out.println(entry.getId());
-				}
-				// System.out.println();
-				if (href.contains("02?")) {
-					// System.out.println("\t" + entry.getHtmlLink().getHref());
-					// entry.delete();
-				}
-
-				// entry.
 			}
 			System.out.println(j);
 			System.out.println("\nTotal Entries: " + entries.size());
