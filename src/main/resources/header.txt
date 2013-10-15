@@ -1,4 +1,4 @@
-Copyright (c) 2010 Thiago Leão Moreira. All rights reserved.
+Copyright (c) 2013 Thiago Leão Moreira. All rights reserved.
 
 Licensed under the LGPL License, Version 3.0 (the "License");
 you may not use this file except in compliance with the License.
