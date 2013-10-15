@@ -71,4 +71,7 @@
 			<timezone>-3</timezone>
 		</developer>
 	</developers>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 </project>
